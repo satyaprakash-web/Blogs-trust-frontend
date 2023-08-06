@@ -15,6 +15,7 @@ import Navbar from './components/navbar/Navbar';
 function App() {
   const context = useContext(UserContext);
   const { user,progress,setProgress} = context;
+  console.log(process.env.REACT_APP_SERVER)
   return (
     <div>
       <Router>
