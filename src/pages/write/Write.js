@@ -31,14 +31,14 @@ export default function Write() {
             newPost.photo = filename;
             try {
                 // upload image
-                await axios.post("http://localhost:5000/api/upload", data);
+                await axios.post(`${process.env.REACT_APP_SERVER}/api/upload`, data);
             } catch (err) {
                 console.log(err);
             }
         }
         try {
             // now upload newPost 
-            const res = await axios.post("http://localhost:5000/api/posts/createpost", newPost);
+            const res = await axios.post(`${process.env.REACT_APP_SERVER}/api/posts/createpost`, newPost);
             //now show newpost in singlepage -- path of react app /post/:postIdz
             navigate("/post/" + res.data._id);
         } catch (err) {

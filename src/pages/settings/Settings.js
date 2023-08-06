@@ -20,7 +20,7 @@ function Setting() {
 
     // to show stored image in api folder
     // make Public folder
-    const PF = "http://localhost:5000/images/";
+    const PF = `${process.env.REACT_APP_SERVER}/images/`;
 
     const handleUpdate = async (e) => {
         e.preventDefault();
@@ -39,14 +39,14 @@ function Setting() {
             updatedUser.profilePic = filename;
             try {
                 // upload image
-                await axios.post("http://localhost:5000/api/upload", data);
+                await axios.post(`${process.env.REACT_APP_SERVER}/api/upload`, data);
             } catch (err) {
                 console.log(err);
             }
         }
         try {
             // now update user 
-            const res = await axios.put(`http://localhost:5000/api/users/update/${user._id}`, updatedUser);
+            const res = await axios.put(`${process.env.REACT_APP_SERVER}/api/users/update/${user._id}`, updatedUser);
             console.log("updated user is ", res.data);
             navigate("/");
             // update user
@@ -62,7 +62,7 @@ function Setting() {
     // delete account
     const handleDelete = async () => {
         try {
-            const res = await axios.delete(`http://localhost:5000/api/users/delete/${user._id}`, {
+            const res = await axios.delete(`${process.env.REACT_APP_SERVER}/api/users/delete/${user._id}`, {
                 data: { username: user.username, userId: user._id }
             });
             const data = res.data;

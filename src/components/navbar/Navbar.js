@@ -12,9 +12,9 @@ import { motion } from 'framer-motion';
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
-    // to show stored image in api folder
+    // to show stored image in api folderi
     // make Public folder
-    const PF = "http://localhost:5000/images/";
+    const PF = `${process.env.REACT_APP_SERVER}/images/`;
 
     const context = useContext(UserContext);
     const { user, setUser, mode, setMode } = context;

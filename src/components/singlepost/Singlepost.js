@@ -18,7 +18,7 @@ function Singlepost() {
   useEffect(() => {
     const fetchSinglePost = async () => {
       setProgress(0);
-      const res = await axios.get(`http://localhost:5000/api/posts/${postId}`);
+      const res = await axios.get(`${process.env.REACT_APP_SERVER}/api/posts/${postId}`);
       // console.log(res);
       setProgress(30);
       setSinglePost(res.data);
@@ -31,7 +31,7 @@ function Singlepost() {
 
   // to show stored image in api folder
   // make Public folder
-  const PF = "http://localhost:5000/images/";
+  const PF = `${process.env.REACT_APP_SERVER}/images/`;
 
 
   //2 - delete post if this post belongs to current user
@@ -41,7 +41,7 @@ function Singlepost() {
 
   const handleDelete = async () => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/posts/delete/${postId}`, {
+      const res = await axios.delete(`${process.env.REACT_APP_SERVER}/api/posts/delete/${postId}`, {
         data: { username: user.username }
       });
       // go to homepage after deleting

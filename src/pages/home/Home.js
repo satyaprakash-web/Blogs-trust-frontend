@@ -25,7 +25,7 @@ function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       setProgress(10);
-      const res = await axios.get("http://localhost:5000/api/posts"+search);
+      const res = await axios.get(`${process.env.REACT_APP_SERVER}/api/posts`+search);
       // console.log(res);
       setProgress(50);
       setPosts(res.data);

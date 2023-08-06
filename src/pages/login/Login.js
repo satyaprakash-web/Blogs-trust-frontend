@@ -16,7 +16,7 @@ function Login() {
         e.preventDefault();
         try {
             // eslint-disable-next-line
-            const res = await axios.post("http://localhost:5000/api/auth/login", {
+            const res = await axios.post(`${process.env.REACT_APP_SERVER}/api/auth/login`, {
                 username: credentials.username,
                 password: credentials.password
             });
