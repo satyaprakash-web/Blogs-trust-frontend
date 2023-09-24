@@ -11,14 +11,6 @@ function Posts(props) {
                 <Post post = {post} />
             </div>
             ))}
-            {/* Or */}
-            {/* {props.posts.map((post) => {
-                return (
-                    <div key={post._id} className="col-md-6">
-                        <Post />
-                    </div>
-                )
-            })} */}
         </div>
     )
 }
