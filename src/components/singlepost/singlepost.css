@@ -103,3 +103,16 @@
         padding: 2px;
     }
 }
+
+
+.editContainer> div{
+    margin-bottom: 20px;
+}
+
+.editContainer input, .editContainer textarea{
+    width: 100%;
+    padding: 4px 10px;
+}
+.editContainer textarea{
+    resize: none;
+}

@@ -128,13 +128,14 @@ function Singlepost() {
         </div>
 
         {editVisible && (
-          <div>
+          <div class="editContainer">
             <div>
               <input type="text" placeholder="Title" value={title} onChange={event=> setTitle(event.target.value)}/>
             </div>
             <div>
               <textarea
                 placeholder="Description"
+                rows={10}
                 value={description}
                 onChange={event=> setDescripion(event.target.value)}
               ></textarea>
