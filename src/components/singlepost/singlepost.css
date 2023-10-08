@@ -122,8 +122,7 @@
     text-align: center;
     margin-top: 20px;
   }
-  
-  /* Style the button within the div */
+
   #update button {
     background-color: #007bff;
     color: #fff;
@@ -132,8 +131,7 @@
     cursor: pointer;
     border-radius: 5px;
   }
-  
-  /* Change button styles on hover */
+
   #update button:hover {
     background-color: #0056b3;
   }
