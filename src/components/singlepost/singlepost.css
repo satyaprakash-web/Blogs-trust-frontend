@@ -116,3 +116,25 @@
 .editContainer textarea{
     resize: none;
 }
+
+/* Style the div with id "update" */
+#update {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Style the button within the div */
+  #update button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Change button styles on hover */
+  #update button:hover {
+    background-color: #0056b3;
+  }
+  
