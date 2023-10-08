@@ -140,7 +140,7 @@ function Singlepost() {
                 onChange={event=> setDescripion(event.target.value)}
               ></textarea>
             </div>
-            <div id ="button">
+            <div id ="update">
               <button onClick={handlePostUpdate}>Update</button>
             </div>
           </div>
